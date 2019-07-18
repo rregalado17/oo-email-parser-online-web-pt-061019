@@ -14,11 +14,8 @@ class EmailParser
     csv_emails.split.collect do |email| #interate over the email address and split at the comma. 
       email.split(',')
     end
-    .flatten.uniq #flatten unique emmails
+    .flatten.uniq #returns a new AND unique array 
   end
-  
-  
-  
   
   
   
