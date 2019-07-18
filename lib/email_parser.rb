@@ -5,4 +5,21 @@
 
 class EmailParser
   attr_accessor :name, :csv_emails
+  
+  def initialize(csv_emails)
+    @csv_emauls = csv_emails #class reader   
+  end 
+  
+  def parse 
+    csv_emails.split.collect do |email|
+      email.split(',')
+    end
+    .flatten.uniq 
+  end
+  end
+  
+  
+  
+  
+  
 end
